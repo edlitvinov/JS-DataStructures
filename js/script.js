@@ -49,37 +49,76 @@ function dubNum(n) {
 // console.log(res);
 
 // Filter
-const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const use = [           // коллекция
-{
-    id: 1,
-    name: 'Brad',
-    isMarried: true 
-},
-{
-    id: 2,
-    name: 'Diana',
-    isMarried: false
-},
-{
-    id: 3,
-    name: 'Olivie',
-    isMarried: true
-},
-{
-    id: 4,
-    name: 'Scott',
-    isMarried: false
-}
+// const use = [           // коллекция
+// {
+//     id: 1,
+//     name: 'Brad',
+//     isMarried: true 
+// },
+// {
+//     id: 2,
+//     name: 'Diana',
+//     isMarried: false
+// },
+// {
+//     id: 3,
+//     name: 'Olivie',
+//     isMarried: true
+// },
+// {
+//     id: 4,
+//     name: 'Scott',
+//     isMarried: false
+// }
+// ];
+
+// const marrUse = use.filter(use => use.isMarried);
+// console.log(marrUse);
+
+// const oddNum = num.filter(n => n % 2 !== 0);
+// const evNum = num.filter(n => n % 2 === 0);
+
+// console.log(oddNum);
+// console.log(evNum);
+// console.log(num);
+
+// Reduce
+const staff = [
+    {
+        id: 1,
+        name: 'John',
+        salary: 1000
+    },
+    {
+       id: 2,
+        name: 'Sara',
+        salary: 900 
+    },
+    {
+       id: 3,
+        name: 'Elton',
+        salary: 1100  
+    },
+    {
+       id: 4,
+        name: 'Mo',
+        salary: 1000 
+    }
 ];
 
-const marrUse = use.filter(use => use.isMarried);
-console.log(marrUse);
+const budjet = staff.reduce((acc, user) => {       // возвращает любую структуру данных
+    return acc + user.salary;
+}, 0);       
+console.log(budjet);
 
-const oddNum = num.filter(n => n % 2 !== 0);
-const evNum = num.filter(n => n % 2 === 0);
+const budgetFor = staff.reduce((acc, user) => {
+    if (user.salary < 1000) {
+        return acc + user.salary
+    }
 
-console.log(oddNum);
-console.log(evNum);
-console.log(num);
+    return acc;
+}, 0);
+
+console.log(budgetFor);
