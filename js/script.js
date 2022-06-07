@@ -85,6 +85,7 @@ function dubNum(n) {
 // console.log(num);
 
 // Reduce
+/*
 const staff = [
     {
         id: 1,
@@ -122,3 +123,41 @@ const budgetFor = staff.reduce((acc, user) => {
 }, 0);
 
 console.log(budgetFor);
+
+*/
+
+// find in collection
+
+const developers = [
+    {
+        id: 1,
+        fullName: 'John Doe',
+        skills: ['HTML', 'CSS', 'JavaScript'],
+        area: 'frontend'
+    },
+    {
+        id: 2,
+        fullName: 'Adam Smith',
+        skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+        area: 'frontend'
+    },
+    {
+        id: 3,
+        fullName: 'Will Dowson',
+        skils: ['HTML', 'PHP', 'Laravel'],
+        area: 'backend',
+    },
+    {
+        id: 4,
+        fullName: 'Sam Wilson',
+        skills: ['HTML', 'CSS', 'JavaScript', 'PHP'],
+        area: 'fullatack'
+    }
+];
+console.log(developers.find(item => item.area === 'frontend'));
+/*
+const cities = ['London', 'Paris', 'Madrid', 'Lisboa'];
+cities.includes['Madrid']; // true/false
+cities.indexOf('Paris'); // 1
+*/
+
