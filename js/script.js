@@ -128,6 +128,7 @@ console.log(budgetFor);
 
 // find in collection
 
+/*
 const developers = [
     {
         id: 1,
@@ -155,9 +156,16 @@ const developers = [
     }
 ];
 console.log(developers.find(item => item.area === 'frontend'));
+*/
 /*
 const cities = ['London', 'Paris', 'Madrid', 'Lisboa'];
 cities.includes['Madrid']; // true/false
 cities.indexOf('Paris'); // 1
 */
+
+// Sort
+
+const num = [10, 13, 1, 2, 3, 4, 5, 6];
+num.sort();
+console.log(num);
 
